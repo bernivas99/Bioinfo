@@ -1,13 +1,13 @@
 final_str=''
 
 codon = {}
-with open("PROT/codon_table.txt") as f:
+with open("codon_table.txt") as f:
     for line in f:
         key, value = line.split()
         codon[key] = value
 
 
-with open("PROT/rosalind_prot.txt") as f:
+with open("rosalind_prot.txt") as f:
     line = f.readlines()
 for i in range(2,len(line[0])):
     if i%3==2:

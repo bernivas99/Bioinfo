@@ -1,0 +1,2 @@
+def puszi():
+    print('puszi')
