@@ -4,13 +4,13 @@ import numpy as np
 def kmp_failure_arr(s):
     m=len(s)
     P_arr=np.zeros(m).astype('int')
-    for q in range(1,m):
-        k=P_arr[q-1]
-        while k>0 and s[k]!=s[q]:
+    for i in range(1,m):
+        k=P_arr[i-1]
+        while k>0 and s[k]!=s[i]:
             k=P_arr[k-1]
-        if s[k]==s[q]:
+        if s[k]==s[i]:
             k+=1
-        P_arr[q]=k
+        P_arr[i]=k
     return P_arr 
 
 
