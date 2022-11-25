@@ -1,5 +1,4 @@
 import networkx as nx
-from itertools import combinations_with_replacement, permutations
 
 def funcREVC(t):
     new_t=t[::-1]
@@ -14,15 +13,6 @@ def funcREVC(t):
         elif letter=='G':
             newstr=newstr+'C'
     return newstr
-
-def generate_all_combos(alphabet,n):
-    all_combos=[]
-    combi_list=list(combinations_with_replacement(alphabet,n))
-    for item in combi_list:
-        perm=permutations(item)
-        all_combos=all_combos+list(perm)
-    combi=set(all_combos)
-    return combi
 
 
 with open('rosalind_gasm.txt','r') as f:
